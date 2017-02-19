@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+    <head>
+        <title>Throughput Test</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="../css/app.css"> -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="js/controllers/throughput.js"></script>
+        <script src="js/services/iperf.js"></script>
+
+    </head>
+    <body>
+        <div ng-controller="ThroughputController" class="container">
+
+          <div class="row">
+            <div class="col-sm-12"><h1>Throughput Test</h1></div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label for="server">iPerf Server:</label>
+                <input type="text" class="form-control" id="server" ng-model="server">
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="checkbox">
+                <label><input type="checkbox" value="" ng-model="reverse">Reverse</label>
+              </div>
+            </div>  
+          </div>
+
+          <div class="row">
+            <div class="col-sm-1"><button type="button" ng-disabled="server.length == ''" ng-click="getTestResults(server, reverse)" class="btn btn-primary btn-sm">Run Test</button></div>
+            <div class="col-sm-4"><i ng-show="showSpinner" class="fa fa-spinner fa-spin" style="font-size:24px"></i></div>
+          </div>
+
+          <div class="row"  ng-show="showResult">
+            <div class="col-sm-12"><h3>Average throughput {{averageResult}} Megabits per sec</h3></div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Second</th>
+                  <th>Data Sent (Mb)</th>
+                  <th>Throughput (Mb/s)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="line in fullResults">
+                  <td>{{$index +1}}</td>
+                  <td>{{(line.streams[0].bytes / 1000000).toFixed(2)}}</td>
+                  <td>{{(line.streams[0].bits_per_second / 1000000).toFixed(2)}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+         
+
+        </div>
+    </body>
+    <script type="text/javascript"></script>
+</html>
+
+<!-- 
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  </head>
+  
+  <body>
+    <div ng-app="myApp" ng-controller="throughputController">
+
+    <p>The hexadecimal value of 254 is:</p>
+
+    <h1>{{hex}}</h1>
+
+    </div>
+
+    <p>A custom service with a method that converts a given number into a hexadecimal number.</p>
+
+    <script>
+      var app = angular.module('myApp', []);
+
+      app.factory('hexafy', function($http) {
+         return {
+           myFunc: function(callback) {
+             $http.get('foo.json').success(callback);
+           }
+         }
+      });
+
+      app.controller('throughputController', function($scope, hexafy) {
+        hexafy.myFunc(function(data) {
+           $scope.hex = data;
+        });
+      });
+
+      // app.service('hexafy', function() {
+      //     this.myFunc = function (x) {
+      //         return x.toString(16);
+      //     }
+      // });
+      // app.controller('throughputController', function($scope, hexafy) {
+      //   $scope.hex = hexafy.myFunc(254);
+      // });
+    </script>
+
+  </body>
+</html>
+
+
+
+
+<!-- 
+
+<!doctype html>
+<html ng-app="todoApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="todo.js"></script>
+    <link rel="stylesheet" href="todo.css">
+  </head>
+  <body>
+    <h2>Todo</h2>
+    <div ng-controller="TodoListController as todoList">
+      <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
+      [ <a href="" ng-click="todoList.archive()">archive</a> ]
+      <ul class="unstyled">
+        <li ng-repeat="todo in todoList.todos">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="todo.done">
+            <span class="done-{{todo.done}}">{{todo.text}}</span>
+          </label>
+        </li>
+      </ul>
+      <form ng-submit="todoList.addTodo()">
+        <input type="text" ng-model="todoList.todoText"  size="30"
+               placeholder="add new todo here">
+        <input class="btn-primary" type="submit" value="add">
+      </form>
+    </div>
+  </body>
+</html> -->

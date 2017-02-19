@@ -1,0 +1,127 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'cors' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 warn package.json throughputApp@1.0.0 No description
+5 warn package.json throughputApp@1.0.0 No repository field.
+6 warn package.json throughputApp@1.0.0 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'cors', null ]
+9 verbose cache add name=undefined spec="cors" args=["cors",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'cors',
+10 verbose parsed url   path: 'cors',
+10 verbose parsed url   href: 'cors' }
+11 silly lockFile 3b1b74c9-cors cors
+12 verbose lock cors /Users/jantinarella/.npm/3b1b74c9-cors.lock
+13 silly lockFile 3b1b74c9-cors cors
+14 silly lockFile 3b1b74c9-cors cors
+15 verbose addNamed [ 'cors', '' ]
+16 verbose addNamed [ null, '*' ]
+17 silly lockFile 9fcb5857-cors cors@
+18 verbose lock cors@ /Users/jantinarella/.npm/9fcb5857-cors.lock
+19 silly addNameRange { name: 'cors', range: '*', hasData: false }
+20 verbose request where is /cors
+21 verbose request registry https://registry.npmjs.org/
+22 verbose request id a793912b618ec27e
+23 verbose url raw /cors
+24 verbose url resolving [ 'https://registry.npmjs.org/', './cors' ]
+25 verbose url resolved https://registry.npmjs.org/cors
+26 verbose request where is https://registry.npmjs.org/cors
+27 info trying registry request attempt 1 at 18:29:46
+28 verbose etag "CWZ9PJOSGWAHELJW8GWZ0HLS9"
+29 http GET https://registry.npmjs.org/cors
+30 http 200 https://registry.npmjs.org/cors
+31 silly registry.get cb [ 200,
+31 silly registry.get   { server: 'nginx/1.10.1',
+31 silly registry.get     'content-type': 'application/json',
+31 silly registry.get     'last-modified': 'Tue, 14 Feb 2017 08:44:48 GMT',
+31 silly registry.get     etag: 'W/"58a2c380-d29b"',
+31 silly registry.get     'content-encoding': 'gzip',
+31 silly registry.get     'cache-control': 'max-age=300',
+31 silly registry.get     'content-length': '7529',
+31 silly registry.get     'accept-ranges': 'bytes',
+31 silly registry.get     date: 'Fri, 17 Feb 2017 01:29:46 GMT',
+31 silly registry.get     via: '1.1 varnish',
+31 silly registry.get     age: '0',
+31 silly registry.get     connection: 'keep-alive',
+31 silly registry.get     'x-served-by': 'cache-den6025-DEN',
+31 silly registry.get     'x-cache': 'HIT',
+31 silly registry.get     'x-cache-hits': '1',
+31 silly registry.get     'x-timer': 'S1487294986.204663,VS0,VE52',
+31 silly registry.get     vary: 'Accept-Encoding' } ]
+32 silly addNameRange number 2 { name: 'cors', range: '*', hasData: true }
+33 silly addNameRange versions [ 'cors',
+33 silly addNameRange   [ '0.0.1',
+33 silly addNameRange     '0.0.2',
+33 silly addNameRange     '0.0.3',
+33 silly addNameRange     '0.0.4',
+33 silly addNameRange     '0.0.5',
+33 silly addNameRange     '0.1.0',
+33 silly addNameRange     '0.1.1',
+33 silly addNameRange     '1.0.0',
+33 silly addNameRange     '1.0.1',
+33 silly addNameRange     '2.0.0',
+33 silly addNameRange     '2.1.0',
+33 silly addNameRange     '2.1.1',
+33 silly addNameRange     '2.2.0',
+33 silly addNameRange     '2.3.0',
+33 silly addNameRange     '2.3.1',
+33 silly addNameRange     '2.3.2',
+33 silly addNameRange     '2.4.0',
+33 silly addNameRange     '2.4.1',
+33 silly addNameRange     '2.4.2',
+33 silly addNameRange     '2.5.0',
+33 silly addNameRange     '2.5.1',
+33 silly addNameRange     '2.5.2',
+33 silly addNameRange     '2.5.3',
+33 silly addNameRange     '2.6.0',
+33 silly addNameRange     '2.6.1',
+33 silly addNameRange     '2.7.0',
+33 silly addNameRange     '2.7.1',
+33 silly addNameRange     '2.7.2',
+33 silly addNameRange     '2.8.0',
+33 silly addNameRange     '2.8.1' ] ]
+34 verbose addNamed [ 'cors', '2.8.1' ]
+35 verbose addNamed [ '2.8.1', '2.8.1' ]
+36 silly lockFile 0682a027-cors-2-8-1 cors@2.8.1
+37 verbose lock cors@2.8.1 /Users/jantinarella/.npm/0682a027-cors-2-8-1.lock
+38 silly lockFile 0212a7ae-ry-npmjs-org-cors-cors-2-8-1-tgz https://registry.npmjs.org/cors/-/cors-2.8.1.tgz
+39 verbose lock https://registry.npmjs.org/cors/-/cors-2.8.1.tgz /Users/jantinarella/.npm/0212a7ae-ry-npmjs-org-cors-cors-2-8-1-tgz.lock
+40 verbose addRemoteTarball [ 'https://registry.npmjs.org/cors/-/cors-2.8.1.tgz',
+40 verbose addRemoteTarball   '6181aa56abb45a2825be3304703747ae4e9d2383' ]
+41 info retry fetch attempt 1 at 18:29:46
+42 verbose fetch to= /var/folders/br/my4f8knd47jgp7b18vsh2l71g2lrjs/T/npm-84786-kBTqBwf2/registry.npmjs.org/cors/-/cors-2.8.1.tgz
+43 http GET https://registry.npmjs.org/cors/-/cors-2.8.1.tgz
+44 http 200 https://registry.npmjs.org/cors/-/cors-2.8.1.tgz
+45 silly lockFile 0212a7ae-ry-npmjs-org-cors-cors-2-8-1-tgz https://registry.npmjs.org/cors/-/cors-2.8.1.tgz
+46 silly lockFile 0212a7ae-ry-npmjs-org-cors-cors-2-8-1-tgz https://registry.npmjs.org/cors/-/cors-2.8.1.tgz
+47 silly lockFile 0682a027-cors-2-8-1 cors@2.8.1
+48 silly lockFile 0682a027-cors-2-8-1 cors@2.8.1
+49 silly lockFile 9fcb5857-cors cors@
+50 silly lockFile 9fcb5857-cors cors@
+51 error Error: EACCES, mkdir '/Users/jantinarella/.npm/cors/2.8.1'
+51 error  { [Error: EACCES, mkdir '/Users/jantinarella/.npm/cors/2.8.1']
+51 error   errno: 3,
+51 error   code: 'EACCES',
+51 error   path: '/Users/jantinarella/.npm/cors/2.8.1',
+51 error   parent: 'throughputApp' }
+52 error Please try running this command again as root/Administrator.
+53 error System Darwin 14.0.0
+54 error command "node" "/usr/local/bin/npm" "install" "cors"
+55 error cwd /Users/jantinarella/throughputApp
+56 error node -v v0.10.32
+57 error npm -v 1.4.28
+58 error path /Users/jantinarella/.npm/cors/2.8.1
+59 error code EACCES
+60 error errno 3
+61 error stack Error: EACCES, mkdir '/Users/jantinarella/.npm/cors/2.8.1'
+62 verbose exit [ 3, true ]
