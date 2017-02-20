@@ -21,3 +21,4 @@ Results are displayed with an average throughput as well as individual results f
 
 ### Description:
 The client is written with AngualarJS 1.6 It uses bootstrap and fontawesome for display.
+The conncetion on my local network was faster running in reverse, from the wired laptop sending data.
